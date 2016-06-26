@@ -623,6 +623,11 @@ public abstract class AbstractToolsLiferayMojo extends AbstractLiferayMojo {
 			activeProfileIds.add(activeProfile);
 		}
 
+		projectBuildingRequest.setUserProperties(
+				mavenExecutionRequest.getUserProperties());
+		projectBuildingRequest.setSystemProperties(
+				mavenExecutionRequest.getSystemProperties());
+
 		projectBuildingRequest.setActiveProfileIds(activeProfileIds);
 		projectBuildingRequest.setProfiles(
 			mavenExecutionRequest.getProfiles());
